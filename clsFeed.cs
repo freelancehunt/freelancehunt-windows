@@ -44,13 +44,10 @@ namespace freelancehunt
 
         public void mesDivider(String msg)
         {
-            if (msg.Contains("&mdash;")) { msg = msg.Replace("&mdash;", "—"); }
-
-            if (msg.Contains("&#8372;")) { msg = msg.Replace("&#8372;", "₴"); }
-
-            if (msg.Contains("&#8364;")) { msg = msg.Replace("&#8372;", "€"); }
-
-            if (msg.Contains("&#8381;")) { msg = msg.Replace("&#8372;", "₽"); }
+            msg = msg.Replace("&mdash;","—")
+                     .Replace("&#8372;","₴")
+                     .Replace("&#8364;","€")
+                     .Replace("&#8381;","₽");
 
             string[] dd = msg.Split(new char[] { '<', '>' });
 
